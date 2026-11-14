@@ -27,6 +27,8 @@ services:
       - ./data:/app/data
     environment:
       - JUPYTER_TOKEN=
+      
+  #contenedor para mlflow
   mlflow:
       build:
         context: .
