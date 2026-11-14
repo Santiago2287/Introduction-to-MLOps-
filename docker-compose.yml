@@ -13,3 +13,16 @@ services:
       - .:/app
     environment:
       - LOG_LEVEL=DEBUG
+
+  # Tu nuevo "pizarrón" para MLOps (JupyterLab)
+  lab:
+    build: 
+      context: .
+      dockerfile: Dockerfile.lab
+    container_name: mlops_jupyter
+    ports:
+      - "8888:8888"
+    volumes:
+      - ./notebooks:/app/notebooks
+      - ./data:/app/data
+

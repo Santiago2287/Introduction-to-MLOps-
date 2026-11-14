@@ -1,0 +1,7 @@
+FROM python:3.11-slim
+WORKDIR /app
+COPY requirements.txt .
+RUN pip install --no-cahe-dir -r requirements.txt
+
+EXPOSE 8888
+CMD ["jupyter", "lab", "--pi=0.0.0.0", "--port=8888", "--no-browser", "--allow-root"]
