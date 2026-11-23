@@ -4,3 +4,4 @@ jupyterlab
 mlflow
 pandas
 pydantic
+dvc
